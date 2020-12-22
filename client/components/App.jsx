@@ -15,7 +15,7 @@ export class App extends React.Component {
     return (
       <div className='app'>
         <Nav />
-        <h1>orlando's most excellent security blog</h1>
+        
         <h2></h2>
         <Route exact path="/" component={Home} />
         <div> 

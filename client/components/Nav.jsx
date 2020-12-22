@@ -6,11 +6,11 @@ const Nav = () => {
   return (
     <>
       <div className="nav">
-        <NavLink to='/' className="" id="">home</NavLink>
-        <NavLink to='/about' className="" id="">about orlando</NavLink>
-        <NavLink to='/sign-in' className="" id="">sign in</NavLink>
-        <NavLink to='/sign-out' className="" id="">sign out</NavLink>
-        <NavLink to='/sign-up' className="" id="">sign up</NavLink>
+        <NavLink to='/' className="nav-link" id="">home</NavLink>
+        <NavLink to='/about' className="nav-link" id="">about orlando</NavLink>
+        <NavLink to='/sign-in' className="nav-link" id="">sign in</NavLink>
+        <NavLink to='/sign-out' className="nav-link" id="">sign out</NavLink>
+        <NavLink to='/sign-up' className="nav-link" id="">sign up</NavLink>
       </div>
 
     </>
