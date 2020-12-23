@@ -1,26 +1,34 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Route, Switch } from 'react-router-dom'
 
-import { fetchFruits } from '../actions'
+import { fetchBlogsFromDBandAddToRedux } from '../actions/index.js'
 
-export class App extends React.Component {
-  state = {
-    fruits: []
-  }
+import Nav from './Nav'
+import Home from './Home'
 
-  componentDidMount () {
-    this.props.dispatch(fetchFruits())
+
+
+
+class App extends React.Component {
+  
+  componentDidMount() {
+    this.props.dispatch(fetchBlogsFromDBandAddToRedux())
+    console.log('hello')
   }
 
   render () {
     return (
       <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+        <Nav />
+        
+        <h2></h2>
+        <Route exact path="/" component={Home} />
+        <div> 
+          <p></p>
+        </div>
+        
+        
       </div>
     )
   }
@@ -28,8 +36,8 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
-  }
+    blogs: globalState.blogs,
+}
 }
 
 export default connect(mapStateToProps)(App)
