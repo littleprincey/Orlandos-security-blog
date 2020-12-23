@@ -1,20 +1,20 @@
-// import { getFruits } from '../apis/fruits'
+import { getBlogs } from '../apis/blogsAPI'
 
-// export const SET_FRUITS = 'SET_FRUITS'
+export const SET_BLOGS = 'SET_BLOGS'
 
-// export function setFruits (fruits) {
-//   return {
-//     type: SET_FRUITS,
-//     fruits
-//   }
-// }
+export function setBlogs (blogs) {
+  return {
+    type: SET_BLOGS,
+    blogs
+  }
+}
 
-// export function fetchFruits () {
-//   return dispatch => {
-//     return getFruits()
-//       .then(fruits => {
-//         dispatch(setFruits(fruits))
-//         return null
-//       })
-//   }
-// }
+export const fetchBlogsFromDBandAddToRedux = () => {
+  return dispatch => {
+    return getBlogs()
+      .then(blogs => {
+        dispatch(setBlogs(blogs))
+      })
+  }
+}
+

@@ -1,15 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
+
+import { fetchBlogsFromDBandAddToRedux } from '../actions/index.js'
+
 import Nav from './Nav'
 import Home from './Home'
 
 
-export class App extends React.Component {
-  state = {
-    
-  }
 
+
+class App extends React.Component {
+  
+  componentDidMount() {
+    this.props.dispatch(fetchBlogsFromDBandAddToRedux())
+    console.log('hello')
+  }
 
   render () {
     return (
@@ -28,5 +34,10 @@ export class App extends React.Component {
   }
 }
 
+function mapStateToProps (globalState) {
+  return {
+    blogs: globalState.blogs,
+}
+}
 
-export default App
+export default connect(mapStateToProps)(App)
