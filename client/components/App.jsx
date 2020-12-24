@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import { fetchBlogsFromDBandAddToRedux } from '../actions/index.js'
 
@@ -16,18 +16,23 @@ class App extends React.Component {
     this.props.dispatch(fetchBlogsFromDBandAddToRedux())
     console.log('component did mount')
   }
-
+  
   render () {
+    const blog = this.props.blogs 
     return (
       <div className='app'>
         <Nav />
-        
-        <h2></h2>
-        <Route exact path="/" component={Home} />
-        <div> 
-          <p></p>
-        </div>
-        
+        {this.props.loadContent && (
+          <>
+            <Route exact path="/" component={Home} />
+            <h3>Latest:</h3>
+            <div> 
+              <p>{blog[0].title}</p>
+              <p>{blog[0].date}</p>
+              <p>{blog[0].content}</p>
+            </div>
+          </>
+        )}
         
       </div>
     )
@@ -37,6 +42,7 @@ class App extends React.Component {
 function mapStateToProps (globalState) {
   return {
     blogs: globalState.blogs,
+    loadContent: globalState.loadContent
 }
 }
 
