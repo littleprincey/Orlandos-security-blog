@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import { fetchBlogsFromDBandAddToRedux } from '../actions/index.js'
 
 import Nav from './Nav'
 import Home from './Home'
-
-
+import Blog from './Blog'
+import About from './About'
 
 
 class App extends React.Component {
@@ -24,7 +24,11 @@ class App extends React.Component {
         <Nav />
         {this.props.loadContent && (
           <>
-            <Route exact path="/" component={Home} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/about" component={About} />
+            </Switch>
             <h3>Latest:</h3>
             <div> 
               <p>{blog[0].title}</p>
