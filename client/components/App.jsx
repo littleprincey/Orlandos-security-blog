@@ -1,26 +1,39 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Route } from 'react-router-dom'
 
-import { fetchFruits } from '../actions'
+import { fetchBlogsFromDBandAddToRedux } from '../actions/index.js'
 
-export class App extends React.Component {
-  state = {
-    fruits: []
+import Nav from './Nav'
+import Home from './Home'
+
+
+
+
+class App extends React.Component {
+  
+  componentDidMount() {
+    this.props.dispatch(fetchBlogsFromDBandAddToRedux())
+    console.log('component did mount')
   }
-
-  componentDidMount () {
-    this.props.dispatch(fetchFruits())
-  }
-
+  
   render () {
+    const blog = this.props.blogs 
     return (
       <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+        <Nav />
+        {this.props.loadContent && (
+          <>
+            <Route exact path="/" component={Home} />
+            <h3>Latest:</h3>
+            <div> 
+              <p>{blog[0].title}</p>
+              <p>{blog[0].date}</p>
+              <p>{blog[0].content}</p>
+            </div>
+          </>
+        )}
+        
       </div>
     )
   }
@@ -28,8 +41,9 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
-  }
+    blogs: globalState.blogs,
+    loadContent: globalState.loadContent
+}
 }
 
 export default connect(mapStateToProps)(App)

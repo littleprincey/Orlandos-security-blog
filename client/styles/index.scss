@@ -1,6 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
 html, 
 body {
-  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(45deg, #cccacc, #505155) no-repeat ;
+  font-family: "Syne Mono", monospace;
+}
+
+.nav-link {
+  padding: 20px
 }
