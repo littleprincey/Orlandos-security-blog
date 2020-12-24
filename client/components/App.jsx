@@ -18,7 +18,7 @@ class App extends React.Component {
   }
   
   render () {
-    const blog = this.props.blogs 
+   
     return (
       <div className='app'>
         <Nav />
@@ -29,12 +29,6 @@ class App extends React.Component {
               <Route exact path="/blog" component={Blog} />
               <Route exact path="/about" component={About} />
             </Switch>
-            <h3>Latest:</h3>
-            <div> 
-              <p>{blog[0].title}</p>
-              <p>{blog[0].date}</p>
-              <p>{blog[0].content}</p>
-            </div>
           </>
         )}
         

@@ -1,9 +1,11 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 // import { connect } from 'superagent'
 
 const Nav = (props) => {
+  // blog = this.props.blogs 
   return (
     <>
       <div>
@@ -26,6 +28,14 @@ const Nav = (props) => {
               i've just graduated from a 15 week intensive web development bootcamp as a full stack developer! it was here that i discovered a burning drive to delve in and offer my skills - to the wonderful world of cyber security. it's epic. i'm so excited. 
             </p>
           </div>
+          <div>
+          <h3>Latest:</h3>
+            <div> 
+              <p>{props.blogs[0].title}</p>
+              <p>{props.blogs[0].date}</p>
+              <p>{props.blogs[0].content}</p>
+            </div>
+          </div>
           
         </div> 
       </div>
@@ -34,4 +44,11 @@ const Nav = (props) => {
 
   )
 }
-export default Nav
+function mapStateToProps (globalState) {
+  return {
+    blogs: globalState.blogs,
+    loadContent: globalState.loadContent
+}
+}
+
+export default connect(mapStateToProps)(Nav)
