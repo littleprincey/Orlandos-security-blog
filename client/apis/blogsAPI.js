@@ -1,12 +1,12 @@
 import request from 'superagent'
 
-const rootUrl = '/api/v1'
+const rootUrl = '/api/v1/blogs'
 
 export function getBlogs () {
-  return request.get(rootUrl + '/blogs')
+  return request.get(rootUrl)
     .then(res => { 
-      // console.log(res.body.blogs)
-      return res.body.blogs
+      return res.body
       
     })
 }
+

@@ -14,7 +14,7 @@ class App extends React.Component {
   
   componentDidMount() {
     this.props.dispatch(fetchBlogsFromDBandAddToRedux())
-    console.log('hello')
+    console.log('component did mount')
   }
 
   render () {

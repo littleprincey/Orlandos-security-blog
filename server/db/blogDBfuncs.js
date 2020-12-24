@@ -1,7 +1,8 @@
 const connection = require('./connection')
 
 function getBlogs (db = connection) {
-  return db('blogs').select()
+  return db('blogs')
+   .select()
 }
 
 module.exports = {

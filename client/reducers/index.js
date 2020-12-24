@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import blogs from './blogs'
+import blogs from './blogsReducer'
 
 export default combineReducers({
   blogs

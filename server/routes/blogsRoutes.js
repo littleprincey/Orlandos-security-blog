@@ -4,11 +4,10 @@ const { getBlogs } = require('../db/blogDBfuncs')
 
 const router = express.Router()
 
-router.get('/blogs', (req, res) => {
+router.get('/', (req, res) => {
   getBlogs()
     .then(blogs => {
       res.json(blogs)
-      // console.log(blogs)
     })
     .catch(err => {
       console.log(err)
