@@ -10,7 +10,6 @@ const Nav = () => {
         <NavLink to='/about' className="nav-link" id="">about orlando</NavLink>
         <NavLink to='/sign-in' className="nav-link" id="">sign in</NavLink>
         <NavLink to='/sign-out' className="nav-link" id="">sign out</NavLink>
-        <NavLink to='/sign-up' className="nav-link" id="">sign up</NavLink>
       </div>
 
     </>
