@@ -31,9 +31,9 @@ const Nav = (props) => {
           <div>
           <h3>Latest:</h3>
             <div> 
-              <p>{props.blogs[0].title}</p>
-              <p>{props.blogs[0].date}</p>
-              <p>{props.blogs[0].content}</p>
+              <p>{props.blogs[1].title}</p>
+              <p>{props.blogs[1].date}</p>
+              <p>{props.blogs[1].content}</p>
             </div>
           </div>
           
