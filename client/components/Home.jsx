@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 // import { connect } from 'superagent'
 
-const Nav = (props) => {
+const Home = (props) => {
   // blog = this.props.blogs 
   return (
     <>
@@ -51,4 +51,4 @@ function mapStateToProps (globalState) {
 }
 }
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps)(Home)

@@ -8,6 +8,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Blog from './Blog'
 import About from './About'
+import AddBlog from './AddBlog.jsx'
 
 
 class App extends React.Component {
@@ -28,6 +29,7 @@ class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/blog" component={Blog} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/add-blog" component={AddBlog} />
             </Switch>
           </>
         )}
