@@ -6,14 +6,14 @@ const { applyAuthRoutes } = require('authenticare/server')
 
 
 const {
-  userExists,
+  // userExists,
   getUserByName,
 } = require('../db/AuthDBFuncs')
 
 
 
 applyAuthRoutes(router, {
-  userExists,
+  // userExists,
   getUserByName,
 })
 

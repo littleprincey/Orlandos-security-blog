@@ -1,7 +1,7 @@
 import request from 'superagent'
 import { getAuthorizationHeader } from 'authenticare/client'
 
-const rootUrl = '/api/v1/users'
+const rootUrl = '/api/v1'
 const acceptJsonHeader = { Accept: 'application/json' }
 
 export function updateNameAndEmail (user) {
