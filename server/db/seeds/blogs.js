@@ -13,9 +13,9 @@ exports.seed = function(knex) {
         },
         {
           id: 2, 
-          title: '', 
-          content: '', 
-          date: ''
+          title: 'Udemy Course', 
+          content: 'this is such a fantastic course, I feel so lucky to be doing it! Zaid is super thorough and i am learning an enormous ammount. We have downloaded virtual box, installed a couple of virtual machines and have setup our pen testing lab. I feel like Mr Robot. the sun is shining but i am deep in the bowels of of kali linux! Also reading a book about whales, which is super interesting...', 
+          date: '27.12.2020'
         },
         {
           id: 3, 

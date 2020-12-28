@@ -1,10 +1,11 @@
 import React from 'react'
-// import { connect } from 'superagent'
+import { connect } from 'react-redux'
 
 const Blog = (props) => {
+  const blog = props.blog 
   return (
     <>
-      <div className='blog1'>
+      <div className='blog'>
         <div>
           <h3>{blog.title}</h3>
           <p>{blog.content}</p>
@@ -16,4 +17,9 @@ const Blog = (props) => {
 
   )
 }
-export default Blog
+function mapStateToProps(globalState) {
+  return {
+    blogs: globalState.blogs
+  }
+}
+export default connect(mapStateToProps)(Blog)
