@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { addProfileToDbAndRedux } from '../actions'
+import addBlogToReduxAndDB from '../actions/index'
 
 class AddBlog extends React.Component {
   state = {
@@ -18,11 +18,12 @@ class AddBlog extends React.Component {
 
   submitHandler = (e) => {
     e.preventDefault()
-    this.props.dispatch(addProfileToDbAndRedux({
+    const blogData = {
       title: this.state.title,
       date: this.state.date,
       content: this.state.content,
-    }))
+    }
+    this.props.dispatch(addBlogToReduxAndDB(blogData))
     this.props.history.push('/')
   }
 

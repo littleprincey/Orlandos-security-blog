@@ -9,4 +9,12 @@ export function getBlogs () {
       
     })
 }
+export function addBlog(blogData) {
+  return request.post(rootUrl)
+    .send(blogData)
+    .then(res => { 
+      return res.body
+      
+    })
+}
 
