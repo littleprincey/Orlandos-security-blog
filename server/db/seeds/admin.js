@@ -10,7 +10,7 @@ exports.seed = (knex) => {
         
         {
           id: 1, 
-          name: 'Orlando', 
+          username: 'Orlando', 
           hash: orlandoHash, 
         }
 

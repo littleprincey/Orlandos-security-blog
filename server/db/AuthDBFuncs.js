@@ -15,9 +15,9 @@ module.exports = {
 //     })
 // }
 
-function getUserByName (name, db = connection) {
+function getUserByName (username, db = connection) {
   return db('admin')
     .select()
-    .where('name', name)
+    .where('username', username)
     .first()
 }

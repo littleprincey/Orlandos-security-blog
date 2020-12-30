@@ -7,7 +7,7 @@ import { checkAuth } from '../actions/AuthActions';
 
 class SignIn extends React.Component {
   state = {
-    name: "",
+    username: "",
     password: "",
   };
 
@@ -19,8 +19,9 @@ class SignIn extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, password } = this.state;
-    signIn({ name, password }, { baseUrl })
+    const { username, password } = this.state;
+    signIn({ username, password }, { baseUrl })
+    console.log('poo')
       .then((token) => {
         if (isAuthenticated()) {
           this.props.dispatch(checkAuth())
@@ -34,25 +35,25 @@ class SignIn extends React.Component {
   render() {
     return (
       <div className="form-wrapper">
-        <h2 >Sign In</h2>
-        <hr/>
-        <div className="">
-          <form className="signin-form" onSubmit={this.handleSubmit}>
-            <div className="section">
-          <label htmlFor="name">
-              name:
-          </label>
-            <br/>
-          <input
-            onChange={this.handleChange}
-            name="name"
-                value={this.state.name}
-                autoFocus={true}
-              type="text"
-              id="name"
-              placeholder="Enter name here..."
-              />
-            </div>
+      <h2 >Sign In</h2>
+      <hr/>
+      <div className="">
+        <form className="signin-form" onSubmit={this.handleSubmit}>
+          <div className="section">
+        <label htmlFor="username">
+            Username:
+        </label>
+          <br/>
+        <input
+          onChange={this.handleChange}
+          name="username"
+              value={this.state.username}
+              autoFocus={true}
+            type="text"
+            id="username"
+            placeholder="Enter username here..."
+            />
+          </div>
             <br />
             <div className="section">
           <label htmlFor="password">
