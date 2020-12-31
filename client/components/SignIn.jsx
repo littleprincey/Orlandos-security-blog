@@ -21,7 +21,6 @@ class SignIn extends React.Component {
     e.preventDefault();
     const { username, password } = this.state;
     signIn({ username, password }, { baseUrl })
-    console.log('poo')
       .then((token) => {
         if (isAuthenticated()) {
           this.props.dispatch(checkAuth())
