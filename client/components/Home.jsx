@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 // import { connect } from 'superagent'
 
-const Nav = (props) => {
+const Home = (props) => {
   // blog = this.props.blogs 
   return (
     <>
@@ -31,9 +31,10 @@ const Nav = (props) => {
           <div>
           <h3>Latest:</h3>
             <div> 
-              <p>{props.blogs[1].title}</p>
+              {/* <p>{props.blogs[1].title}</p>
               <p>{props.blogs[1].date}</p>
-              <p>{props.blogs[1].content}</p>
+              <p>{props.blogs[1].content}</p> */}
+              <p>alongside the udemy course, im learning about AWS, and cloud cyber security in general.</p>
             </div>
           </div>
           
@@ -51,4 +52,4 @@ function mapStateToProps (globalState) {
 }
 }
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps)(Home)

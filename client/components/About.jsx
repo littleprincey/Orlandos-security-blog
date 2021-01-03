@@ -1,5 +1,4 @@
 import React from 'react'
-// import { connect } from 'superagent'
 
 const Nav = (props) => {
   return (
