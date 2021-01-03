@@ -10,7 +10,7 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/api/v1/blogs', blogRoutes)
-server.use('/api/v1/auth', authRoutes)
+server.use('/api/v1', authRoutes)
 
 
 server.use('*', (req, res) => {
