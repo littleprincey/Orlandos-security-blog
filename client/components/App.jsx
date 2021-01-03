@@ -9,6 +9,7 @@ import Home from './Home'
 import Blog from './Blog'
 import About from './About'
 import AddBlog from './AddBlog.jsx'
+import SignIn from './SignIn.jsx'
 
 
 class App extends React.Component {
@@ -30,6 +31,7 @@ class App extends React.Component {
               <Route exact path="/blog" component={Blog} />
               <Route exact path="/about" component={About} />
               <Route exact path="/add-blog" component={AddBlog} />
+              <Route exact path="/sign-in" component={SignIn} />
             </Switch>
           </>
         )}
