@@ -6,6 +6,9 @@
   "keywords": [
     "fullstack"
   ],
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node server",
     "test": "jest",
