@@ -7,7 +7,8 @@
     "fullstack"
   ],
   "engines": {
-    "node": "12.x"
+    "node": "12.19",
+    "npm": "6.14.8"
   },
   "scripts": {
     "start": "node server",
