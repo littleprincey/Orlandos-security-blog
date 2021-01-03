@@ -16,10 +16,10 @@ export const setLoaded = () => {
     type: SET_LOADED,
   };
 };
-export const setAddedBlog = () => {
+export const setAddedBlog = (blogData) => {
   return {
     type: SET_ADDED_BLOG,
-    blog
+    blogData
   };
 };
 
@@ -36,10 +36,11 @@ export const fetchBlogsFromDBandAddToRedux = () => {
 export const addBlogToReduxAndDB = (blogData) => {
   return dispatch => {
     return addBlog(blogData)
-      .then(blog => {
-        dispatch(setAddedBlog(blog)
-        )
-      } )
+    .then(id => {
+      blogData.id = id
+      dispatch(setAddedBlog(blogData))
+    })
   }
 }
+
 

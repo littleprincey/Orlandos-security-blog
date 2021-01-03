@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import addBlogToReduxAndDB from '../actions/index'
+import { addBlogToReduxAndDB } from '../actions/index'
 
 class AddBlog extends React.Component {
   state = {
