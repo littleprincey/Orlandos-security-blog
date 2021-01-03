@@ -5,6 +5,13 @@ function getBlogs (db = connection) {
    .select()
 }
 
+//CREATE (Single Resource)
+function addBlog(newBlog, db = connection){
+  return db('blogs').insert(newBlog)
+  .then(ids => ids[0])
+}
+
 module.exports = {
-  getBlogs
+  getBlogs,
+  addBlog
 }
