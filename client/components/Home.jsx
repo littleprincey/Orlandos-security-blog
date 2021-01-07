@@ -31,9 +31,9 @@ const Home = (props) => {
           <div>
           <h3>Latest:</h3>
             <div> 
-              {/* <p>{props.blogs[1].title}</p>
-              <p>{props.blogs[1].date}</p>
-              <p>{props.blogs[1].content}</p> */}
+              <p>{props.blogs[2].title}</p>
+              <p>{props.blogs[2].date}</p>
+              <p>{props.blogs[2].content}</p>
               <p>alongside the udemy course, im learning about AWS, and cloud cyber security in general.</p>
             </div>
           </div>
