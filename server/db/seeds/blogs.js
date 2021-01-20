@@ -19,9 +19,9 @@ exports.seed = function(knex) {
         },
         {
           id: 3, 
-          title: '', 
-          content: '', 
-          date: ''
+          title: 'Ted Talk', 
+          content: 'This was an incredibly inspiring talk by Chani Simms. It was wonderful to hear about the humanness and relevance of cyber security from a WoC and made me even more motivated to get into it! https://www.ted.com/talks/chani_simms_stop_chasing_the_magic_security_box', 
+          date: '8.1.21'
         }
       ]);
     });
