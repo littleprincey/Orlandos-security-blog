@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom'
 
 const Home = (props) => {
   // blog = this.props.blogs 
+  
+  const theBlogs = props.blogs
+  const latestBlog = theBlogs.pop()
+
   return (
     <>
       <div>
@@ -22,7 +26,7 @@ const Home = (props) => {
               <Link to='/blog3'>go to blog 3</Link>
             </li>
           </ul>
-          <div>
+          <div className="intro-text">
             <h3>ethical hacking, here i come!</h3>
             <p>here i will post blogs on my joyous journey through the world of cyber security! 
               i've just graduated from a 15 week intensive web development bootcamp as a full stack developer! it was here that i discovered a burning drive to delve in and offer my skills - to the wonderful world of cyber security. it's epic. i'm so excited. 
@@ -31,10 +35,9 @@ const Home = (props) => {
           <div>
           <h3>Latest:</h3>
             <div> 
-              <p>{props.blogs[2].title}</p>
-              <p>{props.blogs[2].date}</p>
-              <p>{props.blogs[2].content}</p>
-              <p>alongside the udemy course, im learning about AWS, and cloud cyber security in general.</p>
+              <p>{latestBlog.title}</p>
+              <p>{latestBlog.date}</p>
+              <p>{latestBlog.content}</p>
             </div>
           </div>
           
