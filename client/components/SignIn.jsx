@@ -35,7 +35,6 @@ class SignIn extends React.Component {
     return (
       <div className="form-wrapper">
       <h2 >Sign In</h2>
-      <hr/>
       <div className="">
         <form className="signin-form" onSubmit={this.handleSubmit}>
           <div className="section">
