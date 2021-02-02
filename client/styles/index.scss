@@ -8,8 +8,12 @@ body {
   top: 0;
   padding: 0;
   margin: 0;
-  background: linear-gradient(45deg, #cccacc, #505155) no-repeat ;
+  background-image: url("https://atos.net/wp-content/uploads/2020/11/atos-MARCOM-cybersecurity-MAG-header-scaled.jpg");
+  background-color: rgb(30, 163, 30);
+  background-blend-mode: luminosity;
+  // background: linear-gradient(45deg, #cccacc, #505155) no-repeat ;
   font-family: "Syne Mono", monospace;
+  color: aliceblue;
 }
 
 .nav-link {
