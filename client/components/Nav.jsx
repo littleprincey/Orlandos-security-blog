@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom'
+import { logOff } from 'authenticare/client'
 
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 import { logOut } from '../actions/AuthActions'
@@ -10,7 +11,7 @@ const logOutUser = (dispatch) => {
   dispatch(logOut())
 }
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <>
       <div className="nav">
