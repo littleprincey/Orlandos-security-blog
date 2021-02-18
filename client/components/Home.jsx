@@ -34,7 +34,7 @@ const Home = (props) => {
           </div>
           <div className="latest-blog">
           <h3>Latest:</h3>
-            <div> 
+            theBlogs ? <div> 
               <p>{latestBlog.title}</p>
               <p>{latestBlog.date}</p>
               <p>{latestBlog.content}</p>
